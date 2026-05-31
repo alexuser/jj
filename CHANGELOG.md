@@ -51,6 +51,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   launched once per changed file, making it possible to use per-file tools like
   `vimdiff` for editing.
 
+* Added `builtin_log()` revset alias for the built-in default `jj log` revset.
+  `revsets.log` now defaults to `builtin_log()`, so custom log revsets can be
+  defined in terms of the built-in default.
+
 ### Fixed bugs
 
 * `jj bookmark forget` no longer prints `Forgot N local bookmarks.` when no
